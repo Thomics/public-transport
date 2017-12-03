@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+html {
+  font-size: 10px;
+  font-family: 'Lato', sans-serif;
+}
+
+body {
+  width: 50vw;
+}
+
+.page-title {
+  font-size: 4rem;
+  text-transform: uppercase;
+  letter-spacing: 6px;
+}
+
+.bus {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
