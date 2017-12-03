@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Lato');
 
 html {
-  font-size: 10px;
+  font-size: 1vw;
   font-family: 'Lato', sans-serif;
 }
 
@@ -10,7 +10,7 @@ body {
 }
 
 .page-title {
-  font-size: 4rem;
+  font-size: 3rem;
   text-transform: uppercase;
   letter-spacing: 6px;
 }
@@ -19,4 +19,13 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+
+.bus .data-item {
+  font-size: 1.5rem;
+  width: 25%;
+}
+
+.public-transport-container hr {
+  border: 1px solid #555;
 }
