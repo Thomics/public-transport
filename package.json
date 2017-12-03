@@ -1,0 +1,25 @@
+{
+  "name": "public",
+  "version": "1.0.0",
+  "description": "Public Transportation",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Thomics/public-transport.git"
+  },
+  "author": "Thomas Conto",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Thomics/public-transport/issues"
+  },
+  "homepage": "https://github.com/Thomics/public-transport#readme",
+  "dependencies": {
+    "express": "^4.16.2",
+    "parser": "^0.1.4",
+    "path": "^0.12.7",
+    "request": "^2.83.0"
+  }
+}
