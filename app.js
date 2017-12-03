@@ -11,8 +11,8 @@ app.use(parser.json());
 
 var port = process.env.PORT || 3000;
 
-//Sets the default path the be the public folder.
-app.use(express.static(path.join(__dirname, '/public')));
+//Sets the default path the be the public_dir folder.
+app.use(express.static(path.join(__dirname, '/public_dir')));
 
 app.get('/', function(req, res) {
   request('http://api.pugetsound.onebusaway.org/api/where/arrivals-and-departures-for-stop/1_7040.json?key=TEST&minutesAfter=20', function (error, response, body) {
