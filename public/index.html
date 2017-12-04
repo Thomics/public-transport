@@ -4,38 +4,47 @@
   <title>Public Transportation</title>
   <link rel="stylesheet" href="main.css" type="text/css">
 </head>
-<body>
+<body ng-app="transportation">
 
-<section class="public-transport-container">
+<section class="public-transport-container" ng-controller="TransportationController as transportation">
   <h1 class="page-title">Public Transportation</h1>
   <hr />
   <div class="bus">
-    <p class='data-item'>Bus | Trip ID</p>
-    <p class='data-item'>Distance</p>
-    <p class='data-item'>Arrival Time</p>
-    <p class='data-item'>Time to Arrival</p>
+    <p class='data-item bus-id'>Bus | Trip ID</p>
+    <p class='data-item bus-distance'>Distance</p>
+    <p class='data-item bus-arrival'>Arrival Time</p>
+    <p class='data-item bus-estimated'>Estimated Arrival</p>
   </div>
-  <div class="bus first-bus">
-    <p class='data-item'>#9883 | 19382</p> <!--vehicleId | activeTripId -->
-    <p class='data-item'>5993ft</p>
-    <p class='data-item'>0900</p>
-    <p class='data-item'>10 Mins</p>
+  <div class="bus first-bus bus-1">
+    <p class='data-item bus-id bus-1'>#9883 | 19382</p> <!--vehicleId | activeTripId -->
+    <p class='data-item bus-distance bus-1'>5993ft</p>
+    <p class='data-item bus-arrival bus-1'>0900</p>
+    <p class='data-item bus-estimated bus-1'>10 Mins</p>
   </div>
-  <div class="bus second-bus">
-    <p class='data-item'>#9883 - 19382</p> <!--vehicleId | activeTripId -->
-    <p class='data-item'>5993ft</p>
-    <p class='data-item'>0900</p>
-    <p class='data-item'>10 Mins</p>
+  <div class="bus second-bus bus-2">
+    <p class='data-item bus-id bus-2'>#9883 | 19382</p> <!--vehicleId | activeTripId -->
+    <p class='data-item bus-distance bus-2'>5993ft</p>
+    <p class='data-item bus-arrival bus-2'>0900</p>
+    <p class='data-item bus-estimated bus-2'>10 Mins</p>
   </div>
-  <div class="bus third-bus">
-    <p class='data-item'>#9883 - 19382</p> <!--vehicleId | activeTripId -->
-    <p class='data-item'>5993ft</p>
-    <p class='data-item'>0900</p>
-    <p class='data-item'>10 Mins</p>
+  <div class="bus third-bus bus-3">
+    <p class='data-item bus-id bus-3'>#9883 | 19382</p> <!--vehicleId | activeTripId -->
+    <p class='data-item bus-distance bus-3'>5993ft</p>
+    <p class='data-item bus-arrival bus-3'>0900</p>
+    <p class='data-item bus-estimated bus-3'>10 Mins</p>
   </div>
 </section>
 
 
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular-route.js"></script>
+
+<script src="app/test.js"></script>
+<script src="app/app.js"></script>
+<script src="app/transportation.controller.js"></script>
+<script src="app/services/transportation.service.js"></script>
+<script src="app/templates/buses/buses.js"></script>
 
 <!--<script type="text/javascript" src="app.js"></script>-->
 </body>
