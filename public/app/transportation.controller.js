@@ -9,10 +9,9 @@
 
   function TransportationController(TransportationService) {
 
-    console.log('trans');
     var vm = this;
 
-    vm.buses = {};
+    vm.buses = [];
     vm.getBuses = getBuses;
 
     activate();
@@ -21,7 +20,6 @@
     ////////////////////////////////////////////
 
     function activate() {
-      console.log('stiv');
       vm.getBuses();
     }
 
@@ -29,8 +27,22 @@
 
       TransportationService.getBuses()
         .success(function(data) {
+          var busArr = data.data.entry.arrivalsAndDepartures;
+          var bus = {};
+          var busTime = new Date();
 
-          console.log(data);
+          for (var i = 0; i < busArr.length; i++) {
+            //‘
+
+            bus.vehicleId = busArr[i].vehicleId;
+            bus.distanceFromStop = Math.floor(busArr[i].distanceFromStop);
+            bus.scheduledArrivalTime = busArr[i].scheduledArrivalTime;
+            bus.predictedArrivalTime = d.getUTCMinutes() + ':' + d.getUTCSeconds();
+            vm.buses.push(bus);
+            bus = {};
+          }
+          console.log(vm.buses);
+
 
         }).error(function(err){
           console.log(err);

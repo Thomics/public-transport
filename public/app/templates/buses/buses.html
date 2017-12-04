@@ -1,6 +1,8 @@
-<div class="bus">
-  <p class='data-item bus-id'>Bus | Trip ID</p>
-  <p class='data-item bus-distance'>Distance</p>
-  <p class='data-item bus-arrival'>Arrival Time</p>
-  <p class='data-item bus-estimated'>Estimated Arrival</p>
+<div ng-repeat="bus in transportation.buses">
+  <div class="bus">
+    <p class='data-item bus-id'>{{bus.vehicleId}}</p>
+    <p class='data-item bus-distance'>{{bus.distanceFromStop}}</p>
+    <p class='data-item bus-arrival'>{{bus.scheduledArrivalTime}}</p>
+    <p class='data-item bus-estimated'>{{bus.predictedArrivalTime}}</p>
+  </div>
 </div>
